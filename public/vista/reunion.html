@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Gestion de Usuarios</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <!--
+    <script type="text/javascript" src="../controladores/js/funciones.js"> </script>
+    <script type="text/javascript" src="../controladores/js/validaciones.js"> </script>
+    -->
+</head>
+
+<body>
+    <header class="cab">
+        <h1>Formulario Reunion</h1>
+    </header>
+    <form id="reunion" method="POST" enctype="multipart/form-data" action="../controladores/crear_usuario.php" onsubmit="return validarCamposObligatorios()">
+        <div class=" parte1">
+            <label for="fecha">Fecha(*)</label>
+            <input type="date" id="fecha" name="Fecha" value="" placeholder="Ingrese la fecha" /><span id="mensajeCedula" class="error"> </span><br>
+            <label for="hora">Hora (*)</label>
+            <input type="text" id="hora" name="hora" value="" placeholder="Ingrese la hora hh/mm..." onkeyup="valLetras(this)" /><span id="mensajeNombres" class="error"></span><br>
+            <label for="lugar">Lugar (*)</label>
+            <input type="text" id="lugar" name="lugar" value="" placeholder="Ingrese el lugar..."onkeyup="valLetras(this)" /><span id="mensajeApellidos" class="error"></span><br>
+            <label for="coordenadas">Coordenadas latitud (*)</label>
+            <input type="text" id="latitud" name="latitud" value="" placeholder="Ingrese coord latitud ..." /><span id="mensajeDireccion" class="error"></span><br>
+            <label for="coordenadas">Coordenadas longitud(*)</label>
+            <input type="text" id="longitud" name="longitud" value="" placeholder="Ingrese coor longitud..." onkeyup="valNumeros(this)" /><span id="mensajeTelefono" class="error"></span><br>
+            <label for="remitente">Remitente (*)</label>
+            <input type="text" id="remitente" name="remitente" value="" placeholder="Ingrese el remitente..." /><span id="mensajeFechaNacimiento" class="error"></span><br>
+            <label for="invitado">Invitado (*)</label>
+            <input type="text" id="invitado" name="invitado" value="" placeholder="Ingrese el invitado..." /><span id="mensajeCorreo" class="error"></span><br>
+            <label for="motivo">Motivo (*)</label>
+            <input type="text" id="motivo" name="motivo" value="" placeholder="Ingrese motivo de la reunion..." /><span id="mensajeContrasena" class="error"></span>
+            <label for="observacion">Observacion (*)</label>
+            <input type="text" id="observacion" name="observacion" value="" placeholder="Ingrese las observaciones..." /><span id="mensajeContrasena" class="error"></span><br> <br>           
+
+            <input type="submit" id="crear" name="crear" value="Aceptar" />
+            <input type="reset" id="cancelar" name="cancelar" value="Cancelar" />
+            <a href="login.html"><input type="button" id="login" name="login" value="Ya tienes una cuenta Ingresa" /></a>
+        </div>
+
+    </form>
+</body>
+
+</html>

@@ -11,17 +11,17 @@
 
 <body>
     <header class="cab">
-        <h1>Insertar Nueva Persona</h1>
+        <h1>Crear nuevo usuario</h1>
     </header>
-    <form id="formulario01" method="POST" enctype="multipart/form-data" action="../controladores/crear_usuario.php"
-        onsubmit="return validarCamposObligatorios()">
+    <form id="formulario01" method="POST" enctype="multipart/form-data" action="../controladores/crear_usuario.php" onsubmit="return validarCamposObligatorios()">
         <div class=" parte1">
             <label for="cedula">Cedula(*)</label>
             <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese el número de cedula..." />
             <span id="mensajeCedula" class="error"> </span>
             <br>
             <label for="nombres">Nombres (*)</label>
-            <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese sus dos nombres..." onkeyup="valLetras(this)" />
+            <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese sus dos nombres..."
+                onkeyup="valLetras(this)" />
             <span id="mensajeNombres" class="error"></span>
             <br>
             <label for="apellidos">Apelidos (*)</label>
@@ -39,8 +39,7 @@
             <span id="mensajeTelefono" class="error"></span>
             <br>
             <label for="fecha">Fecha Nacimiento (*)</label>
-            <input type="text" id="fechaNacimiento" name="fechaNacimiento" value=""
-                placeholder="Ingrese su fecha de nacimiento ..." />
+            <input type="text" id="fechaNacimiento" name="fechaNacimiento" value="" placeholder="Ingrese su fecha de nacimiento  aaaa/mm/dd..." />
             <span id="mensajeFechaNacimiento" class="error"></span>
             <br>
             <label for="correo">Correo electrónico (*)</label>
@@ -52,12 +51,20 @@
             <input type="password" id="contrasena" name="contrasena" value="" placeholder="Ingrese su contraseña
                             ..." />
             <span id="mensajeContrasena" class="error"></span>
-            <br>
+            <br> <br>
+
+            <label for="rol">Rol (*)</label><br><br>
+            <label for="admin">Administrador</label><br>
+            <input type="radio" id="admin" name="rol" value="admin" />
+            <label for="user">Usuario</label>
+            <input type="radio" id="user" name="rol" value="user" />
+            
+
             <input type="submit" id="crear" name="crear" value="Aceptar" />
             <input type="reset" id="cancelar" name="cancelar" value="Cancelar" />
             <a href="login.html"><input type="button" id="login" name="login" value="Ya tienes una cuenta Ingresa" /></a>
         </div>
-        
+
     </form>
 </body>
 

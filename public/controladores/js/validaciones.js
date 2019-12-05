@@ -27,13 +27,16 @@ function validarCamposObligatorios() {
             elemento.style.border = "1px red solid"
             banderav = true
         }
-        if (elemento.id == 'cedula') {
+        
+        if (elemento.id == 'cedula') 
+        {
             if (valCedula(elemento.id) == true) {
                 banderac = true
             } else {
                 elemento.style.border = "1px red solid"
             }
         }
+        
         if (elemento.id == 'correo') {
             if (valCorreo(elemento.id) == true) {
                 banderae = true
@@ -176,7 +179,7 @@ function valNumeros(datos) {
         }
     }
 }
-
+/*
 function valCedula(valor) {
     var ced = document.getElementById(valor).value.trim()
     var bandera = true;
@@ -229,6 +232,7 @@ function valCedula(valor) {
     }
     return bandera;
 }
+*/
 
 function valCorreo(valor) {
     var correo = document.getElementById(valor).value.trim()
